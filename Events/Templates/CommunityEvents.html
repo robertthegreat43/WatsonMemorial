@@ -1,0 +1,43 @@
+{% extends "home.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div style="background-image: linear-gradient(rgb(255 81 0 / 0.3), rgb(0 42 255 / 0.5))">
+<h1>Events:</h1>
+
+
+    {%for event in events_list%}
+    <h1><i>{{event.event_name}}</i></h1>
+    <h2>{{event.event_date}}</h2>
+    <h2>{{event.event_location}}</h2>
+    <h1>{{event.event_description}}</h1>
+    <img class="fit-picture" src="{{ event.event_image.url }}" alt="event pic" />
+    {%endfor%}
+
+
+
+</div>
+{% endblock %}
+{%  block nav-sidebar %}{%endblock%}
+
+
+{%load static%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
