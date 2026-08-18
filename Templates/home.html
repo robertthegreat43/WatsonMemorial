@@ -1,0 +1,101 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Events</title>
+    <style type="text/css">
+      body {
+        background-image: url("{% static 'logo/nice.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+      .navbar {
+        min-height: 150px;
+        font-size: 25px;
+        color: rgb(255 242 0 / 0.96);
+      }
+      .navbar-brand {
+        font-size: 50px;
+        color: red;
+      }
+      .navbar-brand > img {
+        height: 60px;
+      }
+
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+          <a class="navbar-brand" href='/home/'>Home</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/index/">Community Events <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Videorecording/"> VideoSegments</a>
+              </li>
+              <li class="nav-item" >
+                  <a class="nav-link" href="/daily_bread/">DailyBread</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/prayers_for_those_in_need/">audio segments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/biblechat/"> PRAYERS AND SCRIPTURES</a>
+              </li>
+              {% if not user.is_authenticated %}
+               <li class="nav_item">
+                <a class="nav-link" href="accounts/logout">Logout</a>
+              </li>
+              {% else %}
+               <li class="nav-item">
+                <a class="nav-link" href="/accounts/login/">login</a>
+              </li>
+
+
+
+              {% endif %}
+              </ul>
+          </div>
+
+        </nav>
+         {% block content %}
+        <h1><b>Welcome to The Community!</b></h1>
+        {% endblock %}
+
+  </body>
+
+
+  <!-- Copyright -->
+  <footer class="page-footer font-small blue">
+    <div  class="footer-copyright text-center tabular">© 2026 Copyright:
+      <a href="620 717-0913"> Watson Memorial</a>
+      <p>Website by: The Community</p>
+      <p>In Loving Memory Of: Calvin Green</p>
+    </div>
+  </footer>
+  <!-- Copyright -->
+  </body>
+</html>

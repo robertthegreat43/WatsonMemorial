@@ -1,0 +1,28 @@
+{% extends "home.html" %}
+{%load static%}
+{% block content %}
+<h1>Sermons</h1>
+
+<div>
+    <img src="/video_feed" width="640" height="480">
+
+    <br><br>
+
+    <button onclick="startRecording()">
+        Start Recording
+    </button>
+
+    <button onclick="stopRecording()">
+        Stop Recording
+    </button>
+
+    <button onclick="listVideos()">
+        List Videos
+    </button>
+
+
+    <div id="videoList"></div>
+</div>
+
+<script src="{% static 'events/camera.js' %}"></script>
+{% endblock %}
