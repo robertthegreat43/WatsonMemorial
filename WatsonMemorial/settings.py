@@ -30,7 +30,7 @@ SECRET_KEY = 'p*zimdm)rvzko9e@&z*xh-rrborsb1w407u8tbw4s+yj4fns'
 
 DEBUG = True if ENVIRONMENT=='development' else False
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
 
 
