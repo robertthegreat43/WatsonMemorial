@@ -84,26 +84,14 @@ WSGI_APPLICATION = 'WatsonMemorial.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-if DATABASE_URL:
-    DATABASES = {
-        'default': dj_database_url.parse(
-            DATABASE_URL,
-            conn_max_age=CONN_MAX_AGE,
-            conn_health_checks=CONN_HEALTH_CHECKS)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
-CSRF_COOKIE_SECURE = False if config('ENVIRONMENT')=='development' else True
-SESSION_COOKIE_SECURE = False if config('ENVIRONMENT')=='development' else True
-SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=False, cast=bool)
-SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS', default=0, cast=int)
+
 
 
 
