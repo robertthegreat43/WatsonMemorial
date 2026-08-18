@@ -1,3 +1,9 @@
 pip~=23.2.1
 django
 requests
+Django==6.0.7
+gunicorn
+psycopg2-binary
+opencv-python
+djangorestframework
+python-dotenv
