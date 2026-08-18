@@ -85,9 +85,6 @@ WSGI_APPLICATION = 'WatsonMemorial.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-DATABASE_URL = config('DATABASE_URL', default=None)
-CONN_MAX_AGE = config('CONN_MAX_AGE', default=0, cast=int)
-CONN_HEALTH_CHECKS = config('CONN_HEALTH_CHECKS', default=False, cast=bool)
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.parse(
