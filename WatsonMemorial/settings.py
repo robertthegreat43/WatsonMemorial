@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'p*zimdm)rvzko9e@&z*xh-rrborsb1w407u8tbw4s+yj4fns'
 
 
-DEBUG = True if ENVIRONMENT=='development' else False
+DEBUG = True 
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
