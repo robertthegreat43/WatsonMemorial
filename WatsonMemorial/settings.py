@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os.path
 from pathlib import Path
 
-import dj_database_url
+
 
 
 from django.conf.global_settings import MEDIA_ROOT
